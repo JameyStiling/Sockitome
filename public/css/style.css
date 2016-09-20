@@ -1,3 +1,9 @@
+body {
+  background: linear-gradient(105deg, rgba(163, 231, 215, 1) 0%,rgba(80, 118, 162, 1) 0%,rgba(190, 227, 218, 1) 0%,rgba(177, 225, 249, 1) 100%);
+
+}
+
+
 textarea {
   resize: vertical;
 }
