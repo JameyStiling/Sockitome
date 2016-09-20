@@ -32,3 +32,28 @@ font-family: Lato;
 #username {
   margin-bottom: 4px;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li:last-child {
+  border: none;
+}
+
+li {
+  border-bottom: 1px solid #cacaca;
+  -webkit-transition: font-size 0.4s ease, background-color 0.4s ease;
+  -moz-transition: font-size 0.4s ease, background-color 0.4s ease;
+  -o-transition: font-size 0.4s ease, background-color 0.4s ease;
+  -ms-transition: font-size 0.4s ease, background-color 0.4s ease;
+  transition: font-size 0.4s ease, background-color 0.4s ease;
+  width: 160px;
+  display: block;
+}
+
+li:hover {
+  font-size: 25px;
+}
