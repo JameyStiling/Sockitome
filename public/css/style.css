@@ -2,6 +2,33 @@ textarea {
   resize: vertical;
 }
 
+.sock-title {
+  font-size: 33px;
+  margin: 15px 0 15px 15px;
+
+}
+
 #message-row {
   display:none;
+}
+
+h1 {
+  font-family: Lato;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+font-family: Lato;
+}
+
+.entry {
+  text-align: center;
+}
+
+#username {
+  margin-bottom: 4px;
 }

@@ -15,18 +15,21 @@ app.get('/', function(request, response) {
 
 
 // open a connection with sockets
-io.sockets.on('connection', function(socket) {
-  // events to emit
+io.on('connection', function(socket) {
 
   // connections
+  // each connection to the socket from the client gets push onto the
+  // array.  this allows to keep track of the amount of connected users
   connections.push(socket);
   console.log('connected: %s sockets connected ', connections.length)
 
-  //disconnect
+  //disconnected
   socket.on('disconnect', function(data) {
-    // if (!socket.username) return;
+    // remove the user that disconnected the socket
     users.splice(users.indexOf(socket.username), 1);
+    // updates user names and emits to client the updated list
     updateUsernames();
+    // remove socket that disconnected
     connections.splice(connections.indexOf(socket), 1)
     console.log('Disconnected: %s sockets connected', connections.length)
   })
@@ -44,9 +47,11 @@ io.sockets.on('connection', function(socket) {
     callback(true);
     socket.username = data;
     users.push(socket.username);
+    // updates user names and emits to client the updated list
     updateUsernames();
   });
 
+  // function to update user names and emits to client the updated list
   function updateUsernames() {
     io.sockets.emit('get users', users);
   }

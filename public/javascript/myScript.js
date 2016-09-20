@@ -2,7 +2,7 @@ $(function() {
   var socket = io.connect();
   var message = $('#message');
   var messageForm = $('#message-form');
-  var messages = $('#messages');
+  var messages = $('#messageList');
   var messageRow = $('#message-row');
   var userForm = $('#user-form');
   var userName = $('#username');
@@ -24,7 +24,7 @@ $(function() {
     socket.emit('new user', userName.val(), function(data) {
       if (data) {
         userFormSection.hide();
-        messageRow.show();
+        messageRow.css("display", "flex");
       }
     });
     userName.val('');
