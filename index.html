@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation-flex.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/javascript/myScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css?version=2">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <h1> this is fun </h1>
+    <div id="user-form-section" class="row">
+      <div class="small-12 columns">
+        <form class="users-form" action="" id="user-form">
+          <label>Login with Username</label>
+          <br>
+          <input placeholder="Enter name" id="username"></input>
+          <br>
+          <input type="submit" class='button' value="login" />
+        </form>
+      </div>
+    </div>
+    <div class="row" id="message-row">
+      <div class="small-4 columns">
+        <div class="side">
+          <h3>Online Users</h3>
+          <ul id="list-items">
+          </ul>
+        </div>
+      </div>
+      <div class="small-8 columns">
+        <div class="messages" id="messages">
+          <form class="messages-form" action="" id="message-form">
+            <label>Message Entry</label>
+            <br>
+            <textarea placeholder="Enter here" id="message"></textarea>
+            <br>
+            <input type="submit" class='button' value="send" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
